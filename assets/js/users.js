@@ -105,11 +105,11 @@ UserSearchForm.addEventListener("submit", function(e) {
 
 // Reset the search input and table
 resetBtn.addEventListener('click', function() {
-  const inputValue = document.getElementById('user-search-input').value
-
-  if(!inputValue) {
+  const input = document.getElementById('user-search-input')
+  
+  if(input.value) {
     // Remove search query
-    inputValue = ''
+    input.value = ''
     // Reset the table
     getUsersData(usersAPI)
   }
